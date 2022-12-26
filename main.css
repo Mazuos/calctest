@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+body::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.container{
+    position: relative;
+    border-radius: 6px;
+    overflow: hidden;
+    z-index: 10;
+    backdrop-filter: blur(15px);
+    border-top: 1px solid black;
+}
+
+.container .calculadora{
+    position: relative;
+    display: grid;
+}
+
+.container .calculadora .value{
+    grid-column: span 4;
+    height: 140px;
+    width: 300px;
+    text-align: right;
+    border: none;
+    outline: none;
+    padding: 10px;
+    font-size: 30px;
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
+}
+
+.container .calculadora span{
+    display: grid;
+    place-items: center;
+    width: 75px;
+    height: 75px;
+    font-weight: 400;
+    cursor: pointer;
+    font-size: 20px;
+    user-select: none;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+    transition: 0.5s;
+}
+
+.container .calculadora span:hover{
+    transition: 0s;
+    background: lightcyan;
+}
+
+.container .calculadora span:active{
+    background: #89cff0;
+    color: lightblue;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.container .calculadora .clear{
+    grid-column: span 2;
+    width: 150px;
+}
+
+.container .calculadora .plus{
+    grid-row: span 2;
+    height: 150px;
+}
